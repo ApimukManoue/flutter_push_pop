@@ -25,14 +25,14 @@ class HomePage extends StatelessWidget {
 
   Widget btnPage2(BuildContext ctx) => TextButton(
     onPressed: () {
-      Navigator.push(ctx, MaterialPageRoute(builder: (ctx) => Page2()));
+      Navigator.push(ctx, MaterialPageRoute(builder: (ctx) => Page2())); //Push ต้อง 
     },
     child: Text('Go to Page2 >>',textScaler: TextScaler.linear(2),),
   );
 
   Widget btnPage3(BuildContext ctx) => TextButton(
     onPressed: () {
-      Navigator.push(ctx, MaterialPageRoute(builder: (ctx) => Page3()));
+      Navigator.push(ctx, MaterialPageRoute(builder: (ctx) => Page3())); //Push ต้อง 
     },
     child: Text('Go to Page3 >>',textScaler: TextScaler.linear(2),),
   );
