@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './HomePage.dart';
 import './Page3.dart';
 
 class Page2 extends StatelessWidget {
@@ -17,6 +18,8 @@ class Page2 extends StatelessWidget {
           btnBack(context),
           SizedBox(height: 30),
           btnPage3(context),
+          SizedBox(height: 30),
+          homePage(context),
         ],
       ),
     ),
@@ -26,7 +29,7 @@ class Page2 extends StatelessWidget {
     onPressed: () {
       Navigator.pop(ctx);                                                   //Pop  ไม่ต้อง Import
     },
-    child: Text('<< Back to HomePage', textScaler: TextScaler.linear(2)),
+    child: Text('<< Back to Last Page', textScaler: TextScaler.linear(2)),
   );
 
   Widget btnPage3(BuildContext ctx) => TextButton(
@@ -36,3 +39,10 @@ class Page2 extends StatelessWidget {
     child: Text('Go to Page3 >>',textScaler: TextScaler.linear(2),),
   );
 }
+  
+  Widget homePage(BuildContext ctx) => TextButton(
+    onPressed: () {
+      Navigator.push(ctx, MaterialPageRoute(builder: (ctx) => HomePage()));  //Push ต้อง 
+    },
+    child: Text('Go to HomePage >>',textScaler: TextScaler.linear(2),),
+  );
